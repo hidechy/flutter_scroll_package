@@ -13,6 +13,7 @@ class ScrollablePositionedListPage extends StatefulWidget {
   const ScrollablePositionedListPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ScrollablePositionedListPageState createState() => _ScrollablePositionedListPageState();
 }
 
@@ -270,6 +271,7 @@ class _ScrollablePositionedListPageState extends State<ScrollablePositionedListP
     return SizedBox(
       height: orientation == Orientation.portrait ? itemHeights[i] : null,
       width: orientation == Orientation.landscape ? itemHeights[i] : null,
+      // ignore: use_colored_box
       child: Container(color: itemColors[i], child: Center(child: Text('Item $i'))),
     );
   }
