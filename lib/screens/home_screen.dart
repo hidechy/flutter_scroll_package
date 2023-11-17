@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_scroll_package/pages/indexed_list_view_page.dart';
 import 'package:test_scroll_package/pages/scroll_to_index_page.dart';
 import 'package:test_scroll_package/pages/scrollable_positioned_list_page.dart';
+import 'package:test_scroll_package/pages/spl_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,6 +47,19 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('scrollable_positioned_list'),
+            ),
+            const Divider(
+              color: Colors.indigo,
+              thickness: 5,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SplPage()),
+                );
+              },
+              child: const Text('spl'),
             ),
           ],
         ),
